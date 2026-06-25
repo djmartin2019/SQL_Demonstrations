@@ -11,19 +11,20 @@ Three brutal, real-world prompts. Every one is solvable with the existing `chino
 **Business scenario.** The head of CRM wants a customer segmentation model to drive a win-back campaign. They specifically want to find customers who *used* to be valuable but are going quiet.
 
 **Requirements.**
+
 1. For every customer, compute the three RFM components using **revenue from `invoice.total`** (not line items):
-   - **Recency** = days between the customer's most recent invoice and the global "today" (max invoice date in the DB).
-   - **Frequency** = distinct count of invoices.
-   - **Monetary** = total spend.
+  - **Recency** = days between the customer's most recent invoice and the global "today" (max invoice date in the DB).
+  - **Frequency** = distinct count of invoices.
+  - **Monetary** = total spend.
 2. Convert each component into a **1–5 score using `NTILE(5)`** across the full customer base (5 = best, so recency must be inverted — a *smaller* gap should score *higher*).
 3. Produce a concatenated `rfm_cell` (e.g. `'5-4-5'`) and an overall `rfm_score` (sum of the three).
 4. Label each customer with a segment using these rules, evaluated **in order**:
-   - `Champion` — R≥4 AND F≥4 AND M≥4
-   - `Loyal` — F≥4 AND M≥3
-   - `At Risk` — R≤2 AND M≥4
-   - `Hibernating` — R≤2 AND F≤2
-   - otherwise `Regular`
-5. Return only the **`At Risk`** segment, ordered by Monetary descending.
+  - `Champion` — R≥4 AND F≥4 AND M≥4
+  - `Loyal` — F≥4 AND M≥3
+  - `At Risk` — R≤2 AND M≥4
+  - `Hibernating` — R≤2 AND F≤2
+  - otherwise `Regular`
+5. Return only the `**At Risk*`* segment, ordered by Monetary descending.
 
 **Definition of done.** One row per at-risk customer: `customer_id`, full name, `recency_days`, `frequency`, `monetary`, `r_score`, `f_score`, `m_score`, `rfm_cell`, `segment`.
 
@@ -36,6 +37,7 @@ Three brutal, real-world prompts. Every one is solvable with the existing `chino
 **Business scenario.** Finance wants a management hierarchy P&L: every manager's "book of business" should include revenue from *their own* customers plus the **fully recursive** revenue of everyone beneath them in the reporting tree.
 
 **Requirements.**
+
 1. Customers are attributed to a sales rep via `customer.support_rep_id → employee.employee_id`.
 2. Direct revenue for an employee = sum of `invoice.total` for invoices belonging to customers they directly support.
 3. Using a **recursive CTE over `employee.reports_to`**, compute each employee's **rolled-up revenue** = their direct revenue + the rolled-up revenue of all descendants (any depth).
@@ -53,11 +55,12 @@ Three brutal, real-world prompts. Every one is solvable with the existing `chino
 **Business scenario.** Merchandising wants to know which **genres sell together** inside a single invoice so they can build cross-promotions ("customers buying Metal also buy…").
 
 **Requirements.**
+
 1. Treat each `invoice` as a basket. A basket "contains" a genre if any line item's track belongs to that genre (`invoice_line → track → genre`).
 2. For every **unordered pair of distinct genres (A, B)** that co-occur in at least one basket, compute:
-   - `support_ab` = (# baskets containing both A and B) / (total # baskets).
-   - `confidence_a_to_b` = P(B | A) = baskets with both / baskets with A.
-   - `lift` = support_ab / (support_a × support_b), where `support_x` = baskets containing X / total baskets.
+  - `support_ab` = (# baskets containing both A and B) / (total # baskets).
+  - `confidence_a_to_b` = P(B | A) = baskets with both / baskets with A.
+  - `lift` = support_ab / (support_a × support_b), where `support_x` = baskets containing X / total baskets.
 3. Avoid mirror-duplicate pairs (don't report both `Rock|Jazz` and `Jazz|Rock`) — enforce `genre_a.name < genre_b.name`.
 4. Keep only pairs co-occurring in **at least 5 baskets** and with **lift > 1** (positive association).
 5. Rank by `lift` descending; return the top 15.
