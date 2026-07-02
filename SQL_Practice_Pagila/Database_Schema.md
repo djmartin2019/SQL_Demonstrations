@@ -53,8 +53,8 @@ Generated: 2026-06-21
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `actor_id` | integer | NO | nextval('actor_actor_id_seq'::regclass) |
-| `first_name` | text | NO | — |
-| `last_name` | text | NO | — |
+| `first_name` | text | NO | - |
+| `last_name` | text | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -78,19 +78,19 @@ Generated: 2026-06-21
 **Primary key:** `address_id`
 
 **Foreign keys:**
-- `city_id` → `city.city_id`
+- `city_id` -> `city.city_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `address_id` | integer | NO | nextval('address_address_id_seq'::regclass) |
-| `address` | text | NO | — |
-| `address2` | text | YES | — |
-| `district` | text | NO | — |
-| `city_id` | integer | NO | — |
-| `postal_code` | text | YES | — |
-| `phone` | text | NO | — |
+| `address` | text | NO | - |
+| `address2` | text | YES | - |
+| `district` | text | NO | - |
+| `city_id` | integer | NO | - |
+| `postal_code` | text | YES | - |
+| `phone` | text | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -99,11 +99,11 @@ Generated: 2026-06-21
 
 | `address_id` | `address` | `address2` | `district` | `city_id` | `postal_code` | `phone` | `last_update` |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 47 MySakila Drive | — | Alberta | 300 | — | — | 2022-02-15 04:45:30-05 |
-| 2 | 28 MySQL Boulevard | — | QLD | 576 | — | — | 2022-02-15 04:45:30-05 |
-| 3 | 23 Workhaven Lane | — | Alberta | 300 | — | 14033335568 | 2022-02-15 04:45:30-05 |
-| 4 | 1411 Lillydale Drive | — | QLD | 576 | — | 6172235589 | 2022-02-15 04:45:30-05 |
-| 5 | 1913 Hanoi Way | — | Nagasaki | 463 | 35200 | 28303384290 | 2022-02-15 04:45:30-05 |
+| 1 | 47 MySakila Drive | - | Alberta | 300 | - | - | 2022-02-15 04:45:30-05 |
+| 2 | 28 MySQL Boulevard | - | QLD | 576 | - | - | 2022-02-15 04:45:30-05 |
+| 3 | 23 Workhaven Lane | - | Alberta | 300 | - | 14033335568 | 2022-02-15 04:45:30-05 |
+| 4 | 1411 Lillydale Drive | - | QLD | 576 | - | 6172235589 | 2022-02-15 04:45:30-05 |
+| 5 | 1913 Hanoi Way | - | Nagasaki | 463 | 35200 | 28303384290 | 2022-02-15 04:45:30-05 |
 
 ---
 
@@ -118,7 +118,7 @@ Generated: 2026-06-21
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `category_id` | integer | NO | nextval('category_category_id_seq'::regclass) |
-| `name` | text | NO | — |
+| `name` | text | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -153,15 +153,15 @@ Generated: 2026-06-21
 **Primary key:** `city_id`
 
 **Foreign keys:**
-- `country_id` → `country.country_id`
+- `country_id` -> `country.country_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `city_id` | integer | NO | nextval('city_city_id_seq'::regclass) |
-| `city` | text | NO | — |
-| `country_id` | integer | NO | — |
+| `city` | text | NO | - |
+| `country_id` | integer | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -189,7 +189,7 @@ Generated: 2026-06-21
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `country_id` | integer | NO | nextval('country_country_id_seq'::regclass) |
-| `country` | text | NO | — |
+| `country` | text | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -213,23 +213,23 @@ Generated: 2026-06-21
 **Primary key:** `customer_id`
 
 **Foreign keys:**
-- `address_id` → `address.address_id`
-- `store_id` → `store.store_id`
+- `address_id` -> `address.address_id`
+- `store_id` -> `store.store_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `customer_id` | integer | NO | nextval('customer_customer_id_seq'::regclass) |
-| `store_id` | integer | NO | — |
-| `first_name` | text | NO | — |
-| `last_name` | text | NO | — |
-| `email` | text | YES | — |
-| `address_id` | integer | NO | — |
+| `store_id` | integer | NO | - |
+| `first_name` | text | NO | - |
+| `last_name` | text | NO | - |
+| `email` | text | YES | - |
+| `address_id` | integer | NO | - |
 | `activebool` | boolean | NO | true |
 | `create_date` | date | NO | CURRENT_DATE |
 | `last_update` | timestamp with time zone | YES | now() |
-| `active` | integer | YES | — |
+| `active` | integer | YES | - |
 
 ### Sample Data
 
@@ -252,27 +252,27 @@ Generated: 2026-06-21
 **Primary key:** `film_id`
 
 **Foreign keys:**
-- `language_id` → `language.language_id`
-- `original_language_id` → `language.language_id`
+- `language_id` -> `language.language_id`
+- `original_language_id` -> `language.language_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `film_id` | integer | NO | nextval('film_film_id_seq'::regclass) |
-| `title` | text | NO | — |
-| `description` | text | YES | — |
-| `release_year` | integer | YES | — |
-| `language_id` | integer | NO | — |
-| `original_language_id` | integer | YES | — |
+| `title` | text | NO | - |
+| `description` | text | YES | - |
+| `release_year` | integer | YES | - |
+| `language_id` | integer | NO | - |
+| `original_language_id` | integer | YES | - |
 | `rental_duration` | smallint | NO | 3 |
 | `rental_rate` | numeric(4,2) | NO | 4.99 |
-| `length` | smallint | YES | — |
+| `length` | smallint | YES | - |
 | `replacement_cost` | numeric(5,2) | NO | 19.99 |
 | `rating` | USER-DEFINED | YES | 'G'::mpaa_rating |
 | `last_update` | timestamp with time zone | NO | now() |
-| `special_features` | ARRAY | YES | — |
-| `fulltext` | tsvector | NO | — |
+| `special_features` | ARRAY | YES | - |
+| `fulltext` | tsvector | NO | - |
 
 ### Sample Data
 
@@ -280,11 +280,11 @@ Generated: 2026-06-21
 
 | `film_id` | `title` | `description` | `release_year` | `language_id` | `original_language_id` | `rental_duration` | `rental_rate` | `length` | `replacement_cost` | `rating` | `last_update` | `special_features` | `fulltext` |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | ACADEMY DINOSAUR | A Epic Drama of a Feminist And a Mad Scientist who… | 2012 | 1 | — | 6 | 0.99 | 86 | 20.99 | PG | 2022-09-10 12:46:03.905795-04 | {"Deleted Scenes","Behind the Scenes"} | 'academi':1 'battl':15 'canadian':20 'dinosaur':2 'drama':5 'epic':4 'feminist':8 'mad':11 'must':14 'rocki':21 'scientist':12 'teacher':17 |
-| 2 | ACE GOLDFINGER | A Astounding Epistle of a Database Administrator A… | 2023 | 1 | — | 3 | 4.99 | 48 | 12.99 | G | 2022-09-10 12:46:03.905795-04 | {Trailers,"Deleted Scenes"} | 'ace':1 'administr':9 'ancient':19 'astound':4 'car':17 'china':20 'databas':8 'epistl':5 'explor':12 'find':15 'goldfing':2 'must':14 |
-| 3 | ADAPTATION HOLES | A Astounding Reflection of a Lumberjack And a Car … | 2017 | 2 | — | 7 | 2.99 | 50 | 18.99 | NC-17 | 2022-09-10 12:46:03.905795-04 | {Trailers,"Deleted Scenes"} | 'adapt':1 'astound':4 'baloon':19 'car':11 'factori':20 'hole':2 'lumberjack':8,16 'must':13 'reflect':5 'sink':14 |
-| 4 | AFFAIR PREJUDICE | A Fanciful Documentary of a Frisbee And a Lumberja… | 2023 | 6 | — | 5 | 2.99 | 117 | 26.99 | G | 2022-09-10 12:46:03.905795-04 | {Commentaries,"Behind the Scenes"} | 'affair':1 'chase':14 'documentari':5 'fanci':4 'frisbe':8 'lumberjack':11 'monkey':16 'must':13 'prejudic':2 'shark':19 'tank':20 |
-| 5 | AFRICAN EGG | A Fast-Paced Documentary of a Pastry Chef And a De… | 2019 | 4 | — | 6 | 2.99 | 130 | 22.99 | G | 2022-09-10 12:46:03.905795-04 | {"Deleted Scenes"} | 'african':1 'chef':11 'dentist':14 'documentari':7 'egg':2 'fast':5 'fast-pac':4 'forens':19 'gulf':23 'mexico':25 'must':16 'pace':6 'pastri':10 'psychologist':20 'pursu':17 |
+| 1 | ACADEMY DINOSAUR | A Epic Drama of a Feminist And a Mad Scientist who... | 2012 | 1 | - | 6 | 0.99 | 86 | 20.99 | PG | 2022-09-10 12:46:03.905795-04 | {"Deleted Scenes","Behind the Scenes"} | 'academi':1 'battl':15 'canadian':20 'dinosaur':2 'drama':5 'epic':4 'feminist':8 'mad':11 'must':14 'rocki':21 'scientist':12 'teacher':17 |
+| 2 | ACE GOLDFINGER | A Astounding Epistle of a Database Administrator A... | 2023 | 1 | - | 3 | 4.99 | 48 | 12.99 | G | 2022-09-10 12:46:03.905795-04 | {Trailers,"Deleted Scenes"} | 'ace':1 'administr':9 'ancient':19 'astound':4 'car':17 'china':20 'databas':8 'epistl':5 'explor':12 'find':15 'goldfing':2 'must':14 |
+| 3 | ADAPTATION HOLES | A Astounding Reflection of a Lumberjack And a Car ... | 2017 | 2 | - | 7 | 2.99 | 50 | 18.99 | NC-17 | 2022-09-10 12:46:03.905795-04 | {Trailers,"Deleted Scenes"} | 'adapt':1 'astound':4 'baloon':19 'car':11 'factori':20 'hole':2 'lumberjack':8,16 'must':13 'reflect':5 'sink':14 |
+| 4 | AFFAIR PREJUDICE | A Fanciful Documentary of a Frisbee And a Lumberja... | 2023 | 6 | - | 5 | 2.99 | 117 | 26.99 | G | 2022-09-10 12:46:03.905795-04 | {Commentaries,"Behind the Scenes"} | 'affair':1 'chase':14 'documentari':5 'fanci':4 'frisbe':8 'lumberjack':11 'monkey':16 'must':13 'prejudic':2 'shark':19 'tank':20 |
+| 5 | AFRICAN EGG | A Fast-Paced Documentary of a Pastry Chef And a De... | 2019 | 4 | - | 6 | 2.99 | 130 | 22.99 | G | 2022-09-10 12:46:03.905795-04 | {"Deleted Scenes"} | 'african':1 'chef':11 'dentist':14 'documentari':7 'egg':2 'fast':5 'fast-pac':4 'forens':19 'gulf':23 'mexico':25 'must':16 'pace':6 'pastri':10 'psychologist':20 'pursu':17 |
 
 ---
 
@@ -295,15 +295,15 @@ Generated: 2026-06-21
 **Primary key:** `actor_id, film_id`
 
 **Foreign keys:**
-- `actor_id` → `actor.actor_id`
-- `film_id` → `film.film_id`
+- `actor_id` -> `actor.actor_id`
+- `film_id` -> `film.film_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `actor_id` | integer | NO | — |
-| `film_id` | integer | NO | — |
+| `actor_id` | integer | NO | - |
+| `film_id` | integer | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -327,15 +327,15 @@ Generated: 2026-06-21
 **Primary key:** `film_id, category_id`
 
 **Foreign keys:**
-- `category_id` → `category.category_id`
-- `film_id` → `film.film_id`
+- `category_id` -> `category.category_id`
+- `film_id` -> `film.film_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `film_id` | integer | NO | — |
-| `category_id` | integer | NO | — |
+| `film_id` | integer | NO | - |
+| `category_id` | integer | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -359,16 +359,16 @@ Generated: 2026-06-21
 **Primary key:** `inventory_id`
 
 **Foreign keys:**
-- `film_id` → `film.film_id`
-- `store_id` → `store.store_id`
+- `film_id` -> `film.film_id`
+- `store_id` -> `store.store_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `inventory_id` | integer | NO | nextval('inventory_inventory_id_seq'::regclass) |
-| `film_id` | integer | NO | — |
-| `store_id` | integer | NO | — |
+| `film_id` | integer | NO | - |
+| `store_id` | integer | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -396,7 +396,7 @@ Generated: 2026-06-21
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `language_id` | integer | NO | nextval('language_language_id_seq'::regclass) |
-| `name` | character(20) | NO | — |
+| `name` | character(20) | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -425,11 +425,11 @@ Generated: 2026-06-21
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -452,20 +452,20 @@ Generated: 2026-06-21
 **Primary key:** `payment_id, payment_date`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `rental_id` → `rental.rental_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `rental_id` -> `rental.rental_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -488,20 +488,20 @@ Generated: 2026-06-21
 **Primary key:** `payment_id, payment_date`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `rental_id` → `rental.rental_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `rental_id` -> `rental.rental_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -524,20 +524,20 @@ Generated: 2026-06-21
 **Primary key:** `payment_id, payment_date`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `rental_id` → `rental.rental_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `rental_id` -> `rental.rental_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -560,20 +560,20 @@ Generated: 2026-06-21
 **Primary key:** `payment_id, payment_date`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `rental_id` → `rental.rental_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `rental_id` -> `rental.rental_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -596,20 +596,20 @@ Generated: 2026-06-21
 **Primary key:** `payment_id, payment_date`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `rental_id` → `rental.rental_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `rental_id` -> `rental.rental_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -632,20 +632,20 @@ Generated: 2026-06-21
 **Primary key:** `payment_id, payment_date`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `rental_id` → `rental.rental_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `rental_id` -> `rental.rental_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -672,11 +672,11 @@ Generated: 2026-06-21
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `payment_id` | integer | NO | nextval('payment_payment_id_seq'::regclass) |
-| `customer_id` | integer | NO | — |
-| `staff_id` | integer | NO | — |
-| `rental_id` | integer | NO | — |
-| `amount` | numeric(5,2) | NO | — |
-| `payment_date` | timestamp with time zone | NO | — |
+| `customer_id` | integer | NO | - |
+| `staff_id` | integer | NO | - |
+| `rental_id` | integer | NO | - |
+| `amount` | numeric(5,2) | NO | - |
+| `payment_date` | timestamp with time zone | NO | - |
 
 ### Sample Data
 
@@ -699,20 +699,20 @@ Generated: 2026-06-21
 **Primary key:** `rental_id`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
-- `inventory_id` → `inventory.inventory_id`
-- `staff_id` → `staff.staff_id`
+- `customer_id` -> `customer.customer_id`
+- `inventory_id` -> `inventory.inventory_id`
+- `staff_id` -> `staff.staff_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `rental_id` | integer | NO | nextval('rental_rental_id_seq'::regclass) |
-| `rental_date` | timestamp with time zone | NO | — |
-| `inventory_id` | integer | NO | — |
-| `customer_id` | integer | NO | — |
-| `return_date` | timestamp with time zone | YES | — |
-| `staff_id` | integer | NO | — |
+| `rental_date` | timestamp with time zone | NO | - |
+| `inventory_id` | integer | NO | - |
+| `customer_id` | integer | NO | - |
+| `return_date` | timestamp with time zone | YES | - |
+| `staff_id` | integer | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data
@@ -736,24 +736,24 @@ Generated: 2026-06-21
 **Primary key:** `staff_id`
 
 **Foreign keys:**
-- `address_id` → `address.address_id`
-- `store_id` → `store.store_id`
+- `address_id` -> `address.address_id`
+- `store_id` -> `store.store_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `staff_id` | integer | NO | nextval('staff_staff_id_seq'::regclass) |
-| `first_name` | text | NO | — |
-| `last_name` | text | NO | — |
-| `address_id` | integer | NO | — |
-| `email` | text | YES | — |
-| `store_id` | integer | NO | — |
+| `first_name` | text | NO | - |
+| `last_name` | text | NO | - |
+| `address_id` | integer | NO | - |
+| `email` | text | YES | - |
+| `store_id` | integer | NO | - |
 | `active` | boolean | NO | true |
-| `username` | text | NO | — |
-| `password` | text | YES | — |
+| `username` | text | NO | - |
+| `password` | text | YES | - |
 | `last_update` | timestamp with time zone | NO | now() |
-| `picture` | bytea | YES | — |
+| `picture` | bytea | YES | - |
 
 ### Sample Data
 
@@ -778,15 +778,15 @@ Generated: 2026-06-21
 **Primary key:** `store_id`
 
 **Foreign keys:**
-- `address_id` → `address.address_id`
+- `address_id` -> `address.address_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
 | `store_id` | integer | NO | nextval('store_store_id_seq'::regclass) |
-| `manager_staff_id` | integer | NO | — |
-| `address_id` | integer | NO | — |
+| `manager_staff_id` | integer | NO | - |
+| `address_id` | integer | NO | - |
 | `last_update` | timestamp with time zone | NO | now() |
 
 ### Sample Data

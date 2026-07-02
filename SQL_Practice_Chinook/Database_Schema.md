@@ -38,15 +38,15 @@ Generated: 2026-06-21
 **Primary key:** `album_id`
 
 **Foreign keys:**
-- `artist_id` → `artist.artist_id`
+- `artist_id` -> `artist.artist_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `album_id` | integer | NO | — |
-| `title` | character varying(160) | NO | — |
-| `artist_id` | integer | NO | — |
+| `album_id` | integer | NO | - |
+| `title` | character varying(160) | NO | - |
+| `artist_id` | integer | NO | - |
 
 ### Sample Data
 
@@ -72,8 +72,8 @@ Generated: 2026-06-21
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `artist_id` | integer | NO | — |
-| `name` | character varying(120) | YES | — |
+| `artist_id` | integer | NO | - |
+| `name` | character varying(120) | YES | - |
 
 ### Sample Data
 
@@ -96,25 +96,25 @@ Generated: 2026-06-21
 **Primary key:** `customer_id`
 
 **Foreign keys:**
-- `support_rep_id` → `employee.employee_id`
+- `support_rep_id` -> `employee.employee_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `customer_id` | integer | NO | — |
-| `first_name` | character varying(40) | NO | — |
-| `last_name` | character varying(20) | NO | — |
-| `company` | character varying(80) | YES | — |
-| `address` | character varying(70) | YES | — |
-| `city` | character varying(40) | YES | — |
-| `state` | character varying(40) | YES | — |
-| `country` | character varying(40) | YES | — |
-| `postal_code` | character varying(10) | YES | — |
-| `phone` | character varying(24) | YES | — |
-| `fax` | character varying(24) | YES | — |
-| `email` | character varying(60) | NO | — |
-| `support_rep_id` | integer | YES | — |
+| `customer_id` | integer | NO | - |
+| `first_name` | character varying(40) | NO | - |
+| `last_name` | character varying(20) | NO | - |
+| `company` | character varying(80) | YES | - |
+| `address` | character varying(70) | YES | - |
+| `city` | character varying(40) | YES | - |
+| `state` | character varying(40) | YES | - |
+| `country` | character varying(40) | YES | - |
+| `postal_code` | character varying(10) | YES | - |
+| `phone` | character varying(24) | YES | - |
+| `fax` | character varying(24) | YES | - |
+| `email` | character varying(60) | NO | - |
+| `support_rep_id` | integer | YES | - |
 
 ### Sample Data
 
@@ -123,10 +123,10 @@ Generated: 2026-06-21
 | `customer_id` | `first_name` | `last_name` | `company` | `address` | `city` | `state` | `country` | `postal_code` | `phone` | `fax` | `email` | `support_rep_id` |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Luís | Gonçalves | Embraer - Empresa Brasileira de Aeronáutica S.A. | Av. Brigadeiro Faria Lima, 2170 | São José dos Campos | SP | Brazil | 12227-000 | +55 (12) 3923-5555 | +55 (12) 3923-5566 | luisg@embraer.com.br | 3 |
-| 2 | Leonie | Köhler | — | Theodor-Heuss-Straße 34 | Stuttgart | — | Germany | 70174 | +49 0711 2842222 | — | leonekohler@surfeu.de | 5 |
-| 3 | François | Tremblay | — | 1498 rue Bélanger | Montréal | QC | Canada | H2G 1A7 | +1 (514) 721-4711 | — | ftremblay@gmail.com | 3 |
-| 4 | Bjørn | Hansen | — | Ullevålsveien 14 | Oslo | — | Norway | 0171 | +47 22 44 22 22 | — | bjorn.hansen@yahoo.no | 4 |
-| 5 | František | Wichterlová | JetBrains s.r.o. | Klanova 9/506 | Prague | — | Czech Republic | 14700 | +420 2 4172 5555 | +420 2 4172 5555 | frantisekw@jetbrains.com | 4 |
+| 2 | Leonie | Köhler | - | Theodor-Heuss-Straße 34 | Stuttgart | - | Germany | 70174 | +49 0711 2842222 | - | leonekohler@surfeu.de | 5 |
+| 3 | François | Tremblay | - | 1498 rue Bélanger | Montréal | QC | Canada | H2G 1A7 | +1 (514) 721-4711 | - | ftremblay@gmail.com | 3 |
+| 4 | Bjørn | Hansen | - | Ullevålsveien 14 | Oslo | - | Norway | 0171 | +47 22 44 22 22 | - | bjorn.hansen@yahoo.no | 4 |
+| 5 | František | Wichterlová | JetBrains s.r.o. | Klanova 9/506 | Prague | - | Czech Republic | 14700 | +420 2 4172 5555 | +420 2 4172 5555 | frantisekw@jetbrains.com | 4 |
 
 ---
 
@@ -137,27 +137,27 @@ Generated: 2026-06-21
 **Primary key:** `employee_id`
 
 **Foreign keys:**
-- `reports_to` → `employee.employee_id`
+- `reports_to` -> `employee.employee_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `employee_id` | integer | NO | — |
-| `last_name` | character varying(20) | NO | — |
-| `first_name` | character varying(20) | NO | — |
-| `title` | character varying(30) | YES | — |
-| `reports_to` | integer | YES | — |
-| `birth_date` | timestamp without time zone | YES | — |
-| `hire_date` | timestamp without time zone | YES | — |
-| `address` | character varying(70) | YES | — |
-| `city` | character varying(40) | YES | — |
-| `state` | character varying(40) | YES | — |
-| `country` | character varying(40) | YES | — |
-| `postal_code` | character varying(10) | YES | — |
-| `phone` | character varying(24) | YES | — |
-| `fax` | character varying(24) | YES | — |
-| `email` | character varying(60) | YES | — |
+| `employee_id` | integer | NO | - |
+| `last_name` | character varying(20) | NO | - |
+| `first_name` | character varying(20) | NO | - |
+| `title` | character varying(30) | YES | - |
+| `reports_to` | integer | YES | - |
+| `birth_date` | timestamp without time zone | YES | - |
+| `hire_date` | timestamp without time zone | YES | - |
+| `address` | character varying(70) | YES | - |
+| `city` | character varying(40) | YES | - |
+| `state` | character varying(40) | YES | - |
+| `country` | character varying(40) | YES | - |
+| `postal_code` | character varying(10) | YES | - |
+| `phone` | character varying(24) | YES | - |
+| `fax` | character varying(24) | YES | - |
+| `email` | character varying(60) | YES | - |
 
 ### Sample Data
 
@@ -165,7 +165,7 @@ Generated: 2026-06-21
 
 | `employee_id` | `last_name` | `first_name` | `title` | `reports_to` | `birth_date` | `hire_date` | `address` | `city` | `state` | `country` | `postal_code` | `phone` | `fax` | `email` |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Adams | Andrew | General Manager | — | 1962-02-18 00:00:00 | 2002-08-14 00:00:00 | 11120 Jasper Ave NW | Edmonton | AB | Canada | T5K 2N1 | +1 (780) 428-9482 | +1 (780) 428-3457 | andrew@chinookcorp.com |
+| 1 | Adams | Andrew | General Manager | - | 1962-02-18 00:00:00 | 2002-08-14 00:00:00 | 11120 Jasper Ave NW | Edmonton | AB | Canada | T5K 2N1 | +1 (780) 428-9482 | +1 (780) 428-3457 | andrew@chinookcorp.com |
 | 2 | Edwards | Nancy | Sales Manager | 1 | 1958-12-08 00:00:00 | 2002-05-01 00:00:00 | 825 8 Ave SW | Calgary | AB | Canada | T2P 2T3 | +1 (403) 262-3443 | +1 (403) 262-3322 | nancy@chinookcorp.com |
 | 3 | Peacock | Jane | Sales Support Agent | 2 | 1973-08-29 00:00:00 | 2002-04-01 00:00:00 | 1111 6 Ave SW | Calgary | AB | Canada | T2P 5M5 | +1 (403) 262-3443 | +1 (403) 262-6712 | jane@chinookcorp.com |
 | 4 | Park | Margaret | Sales Support Agent | 2 | 1947-09-19 00:00:00 | 2003-05-03 00:00:00 | 683 10 Street SW | Calgary | AB | Canada | T2P 5G3 | +1 (403) 263-4423 | +1 (403) 263-4289 | margaret@chinookcorp.com |
@@ -186,8 +186,8 @@ Generated: 2026-06-21
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `genre_id` | integer | NO | — |
-| `name` | character varying(120) | YES | — |
+| `genre_id` | integer | NO | - |
+| `name` | character varying(120) | YES | - |
 
 ### Sample Data
 
@@ -230,21 +230,21 @@ Generated: 2026-06-21
 **Primary key:** `invoice_id`
 
 **Foreign keys:**
-- `customer_id` → `customer.customer_id`
+- `customer_id` -> `customer.customer_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `invoice_id` | integer | NO | — |
-| `customer_id` | integer | NO | — |
-| `invoice_date` | timestamp without time zone | NO | — |
-| `billing_address` | character varying(70) | YES | — |
-| `billing_city` | character varying(40) | YES | — |
-| `billing_state` | character varying(40) | YES | — |
-| `billing_country` | character varying(40) | YES | — |
-| `billing_postal_code` | character varying(10) | YES | — |
-| `total` | numeric(10,2) | NO | — |
+| `invoice_id` | integer | NO | - |
+| `customer_id` | integer | NO | - |
+| `invoice_date` | timestamp without time zone | NO | - |
+| `billing_address` | character varying(70) | YES | - |
+| `billing_city` | character varying(40) | YES | - |
+| `billing_state` | character varying(40) | YES | - |
+| `billing_country` | character varying(40) | YES | - |
+| `billing_postal_code` | character varying(10) | YES | - |
+| `total` | numeric(10,2) | NO | - |
 
 ### Sample Data
 
@@ -252,9 +252,9 @@ Generated: 2026-06-21
 
 | `invoice_id` | `customer_id` | `invoice_date` | `billing_address` | `billing_city` | `billing_state` | `billing_country` | `billing_postal_code` | `total` |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 2 | 2021-01-01 00:00:00 | Theodor-Heuss-Straße 34 | Stuttgart | — | Germany | 70174 | 1.98 |
-| 2 | 4 | 2021-01-02 00:00:00 | Ullevålsveien 14 | Oslo | — | Norway | 0171 | 3.96 |
-| 3 | 8 | 2021-01-03 00:00:00 | Grétrystraat 63 | Brussels | — | Belgium | 1000 | 5.94 |
+| 1 | 2 | 2021-01-01 00:00:00 | Theodor-Heuss-Straße 34 | Stuttgart | - | Germany | 70174 | 1.98 |
+| 2 | 4 | 2021-01-02 00:00:00 | Ullevålsveien 14 | Oslo | - | Norway | 0171 | 3.96 |
+| 3 | 8 | 2021-01-03 00:00:00 | Grétrystraat 63 | Brussels | - | Belgium | 1000 | 5.94 |
 | 4 | 14 | 2021-01-06 00:00:00 | 8210 111 ST NW | Edmonton | AB | Canada | T6G 2C7 | 8.91 |
 | 5 | 23 | 2021-01-11 00:00:00 | 69 Salem Street | Boston | MA | USA | 2113 | 13.86 |
 
@@ -267,18 +267,18 @@ Generated: 2026-06-21
 **Primary key:** `invoice_line_id`
 
 **Foreign keys:**
-- `invoice_id` → `invoice.invoice_id`
-- `track_id` → `track.track_id`
+- `invoice_id` -> `invoice.invoice_id`
+- `track_id` -> `track.track_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `invoice_line_id` | integer | NO | — |
-| `invoice_id` | integer | NO | — |
-| `track_id` | integer | NO | — |
-| `unit_price` | numeric(10,2) | NO | — |
-| `quantity` | integer | NO | — |
+| `invoice_line_id` | integer | NO | - |
+| `invoice_id` | integer | NO | - |
+| `track_id` | integer | NO | - |
+| `unit_price` | numeric(10,2) | NO | - |
+| `quantity` | integer | NO | - |
 
 ### Sample Data
 
@@ -304,8 +304,8 @@ Generated: 2026-06-21
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `media_type_id` | integer | NO | — |
-| `name` | character varying(120) | YES | — |
+| `media_type_id` | integer | NO | - |
+| `name` | character varying(120) | YES | - |
 
 ### Sample Data
 
@@ -331,8 +331,8 @@ Generated: 2026-06-21
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `playlist_id` | integer | NO | — |
-| `name` | character varying(120) | YES | — |
+| `playlist_id` | integer | NO | - |
+| `name` | character varying(120) | YES | - |
 
 ### Sample Data
 
@@ -344,7 +344,7 @@ Generated: 2026-06-21
 | 2 | Movies |
 | 3 | TV Shows |
 | 4 | Audiobooks |
-| 5 | 90’s Music |
+| 5 | 90's Music |
 | 6 | Audiobooks |
 | 7 | Movies |
 | 8 | Music |
@@ -368,15 +368,15 @@ Generated: 2026-06-21
 **Primary key:** `playlist_id, track_id`
 
 **Foreign keys:**
-- `playlist_id` → `playlist.playlist_id`
-- `track_id` → `track.track_id`
+- `playlist_id` -> `playlist.playlist_id`
+- `track_id` -> `track.track_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `playlist_id` | integer | NO | — |
-| `track_id` | integer | NO | — |
+| `playlist_id` | integer | NO | - |
+| `track_id` | integer | NO | - |
 
 ### Sample Data
 
@@ -399,23 +399,23 @@ Generated: 2026-06-21
 **Primary key:** `track_id`
 
 **Foreign keys:**
-- `album_id` → `album.album_id`
-- `genre_id` → `genre.genre_id`
-- `media_type_id` → `media_type.media_type_id`
+- `album_id` -> `album.album_id`
+- `genre_id` -> `genre.genre_id`
+- `media_type_id` -> `media_type.media_type_id`
 
 ### Columns
 
 | Column | Type | Nullable | Default |
 |--------|------|:--------:|---------|
-| `track_id` | integer | NO | — |
-| `name` | character varying(200) | NO | — |
-| `album_id` | integer | YES | — |
-| `media_type_id` | integer | NO | — |
-| `genre_id` | integer | YES | — |
-| `composer` | character varying(220) | YES | — |
-| `milliseconds` | integer | NO | — |
-| `bytes` | integer | YES | — |
-| `unit_price` | numeric(10,2) | NO | — |
+| `track_id` | integer | NO | - |
+| `name` | character varying(200) | NO | - |
+| `album_id` | integer | YES | - |
+| `media_type_id` | integer | NO | - |
+| `genre_id` | integer | YES | - |
+| `composer` | character varying(220) | YES | - |
+| `milliseconds` | integer | NO | - |
+| `bytes` | integer | YES | - |
+| `unit_price` | numeric(10,2) | NO | - |
 
 ### Sample Data
 
@@ -424,9 +424,9 @@ Generated: 2026-06-21
 | `track_id` | `name` | `album_id` | `media_type_id` | `genre_id` | `composer` | `milliseconds` | `bytes` | `unit_price` |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | For Those About To Rock (We Salute You) | 1 | 1 | 1 | Angus Young, Malcolm Young, Brian Johnson | 343719 | 11170334 | 0.99 |
-| 2 | Balls to the Wall | 2 | 2 | 1 | U. Dirkschneider, W. Hoffmann, H. Frank, P. Baltes… | 342562 | 5510424 | 0.99 |
-| 3 | Fast As a Shark | 3 | 2 | 1 | F. Baltes, S. Kaufman, U. Dirkscneider & W. Hoffma… | 230619 | 3990994 | 0.99 |
-| 4 | Restless and Wild | 3 | 2 | 1 | F. Baltes, R.A. Smith-Diesel, S. Kaufman, U. Dirks… | 252051 | 4331779 | 0.99 |
+| 2 | Balls to the Wall | 2 | 2 | 1 | U. Dirkschneider, W. Hoffmann, H. Frank, P. Baltes... | 342562 | 5510424 | 0.99 |
+| 3 | Fast As a Shark | 3 | 2 | 1 | F. Baltes, S. Kaufman, U. Dirkscneider & W. Hoffma... | 230619 | 3990994 | 0.99 |
+| 4 | Restless and Wild | 3 | 2 | 1 | F. Baltes, R.A. Smith-Diesel, S. Kaufman, U. Dirks... | 252051 | 4331779 | 0.99 |
 | 5 | Princess of the Dawn | 3 | 2 | 1 | Deaffy & R.A. Smith-Diesel | 375418 | 6290521 | 0.99 |
 
 ---

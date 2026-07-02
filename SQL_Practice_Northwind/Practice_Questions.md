@@ -8,7 +8,7 @@
     FROM customers
     WHERE country = 'USA';
 ```
-    NOTE: SELECT * is fine for warmups, but it's bad habbit in real work. Avoid brining in columns you don't need.
+    NOTE: SELECT * is fine for warm-ups, but it's a bad habit in real work. Avoid bringing in columns you don't need.
 2. Find all orders placed in 1997.
 ```SQL
     SELECT * FROM orders
@@ -205,7 +205,7 @@
              EXTRACT(YEAR FROM o.order_date)
     ORDER BY year, month;
 ```
-14. Which preoducts have increasing sales month-over-month for at least 3 consecutive months?
+14. Which products have increasing sales month-over-month for at least 3 consecutive months?
 ```SQL
     WITH product_monthly_revenue AS (
         SELECT
@@ -260,7 +260,7 @@
 ```SQL
 
 ```
-17. Identify the top 3 prodcuts per category by sales volume (using RANK or DENSE_RANK).
+17. Identify the top 3 products per category by sales volume (using RANK or DENSE_RANK).
 ```SQL
 
 ```

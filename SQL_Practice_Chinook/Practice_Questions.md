@@ -233,7 +233,7 @@ ORDER BY month_start;
 ---
 
 ## Senior-Level (Interview Sweat)
-19. Build a retention report: how many first-time cusotmers in a month returned to purchase again within 6 months?
+19. Build a retention report: how many first-time customers in a month returned to purchase again within 6 months?
 ```SQL
 
 ```
